@@ -1,0 +1,8 @@
+{
+  "appId": "ma.bac.search",
+  "appName": "BAC Search",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "file"
+  }
+}
