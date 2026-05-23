@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22 # هادي هي لي عتقنا بيها الماتش دابا!
+          node-version: 22
           cache: 'npm'
 
       - name: Install Dependencies
@@ -33,11 +33,12 @@ jobs:
       - name: Build iOS App via Xcode CLI
         run: |
           cd ios/App
-          xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug -allowProvisioningDeviceRegistration -allowProvisioningUpdates CODE_SIGNING_ALLOWED=NO
+          xcodebuild -workspace App.xcworkspace -scheme App -sdk iphonesimulator -configuration Debug CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 
       - name: Compress App for Download
         run: |
-          cd ios/App/build/Release-iphonesimulator/
+          cd ios/App
+          cd build/Debug-iphonesimulator || cd DerivedData/App/Build/Products/Debug-iphonesimulator || cd ~/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator
           zip -r ../../../../bac-search-ios.zip App.app
 
       - name: Upload Finished App Artifact
