@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22 # هادي هي لي عتقنا بيها الماتش دابا!
           cache: 'npm'
 
       - name: Install Dependencies
@@ -26,7 +26,7 @@ jobs:
 
       - name: Setup Capacitor iOS
         run: |
-          npm install @capacitor/ios
+          npm install @capacitor/ios@latest @capacitor/cli@latest
           npx cap add ios
           npx cap sync ios
 
