@@ -1,8 +1,1 @@
-{
-  "apps": [
-    {
-      "appId": "bac-search",
-      "root": "./"
-    }
-  ]
-}
+{"apps":[{"appId":"42df13fc","root":"./"}]}
