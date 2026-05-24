@@ -3,7 +3,7 @@
     {
       "appId": "42df13fc",
       "root": "./",
-      "iosPath": "ios/App"
+      "iosPath": "ios"
     }
   ]
 }
