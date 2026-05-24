@@ -1,1 +1,9 @@
-{"apps":[{"appId":"42df13fc","root":"./"}]}
+{
+  "apps": [
+    {
+      "appId": "42df13fc",
+      "root": "./",
+      "iosPath": "ios/App"
+    }
+  ]
+}
